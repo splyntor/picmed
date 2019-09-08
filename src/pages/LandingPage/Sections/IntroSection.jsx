@@ -16,9 +16,9 @@ import teamStyle from "assets/jss/material-kit-react/views/landingPageSections/t
 
 // YAML data
 import introData from 'data/introData.yml'
-
+import teamData from 'data/teamData.yml'
 // Images
-import abdelghaniImage from "assets/img/team/abdelghani.jpg";
+import abdelghaniImage from "assets/img/team/abdelghani-tie.jpg";
 
 class IntroSection extends React.Component
 {
@@ -41,7 +41,11 @@ class IntroSection extends React.Component
 
                             </h2>
                             <h5 className={ classes.description }>
-                                { introData.content }
+                                { introData.content.p1 }
+                            </h5>
+                            <br/>
+                            <h5 className={ classes.description }>
+                                { introData.content.p2 }
                             </h5>
                         </GridItem>
                     </GridContainer>

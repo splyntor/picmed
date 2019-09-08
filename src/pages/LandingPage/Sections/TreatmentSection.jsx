@@ -6,6 +6,8 @@ import withStyles from "@material-ui/core/styles/withStyles";
 import Chat from "@material-ui/icons/Chat";
 import VerifiedUser from "@material-ui/icons/VerifiedUser";
 import Fingerprint from "@material-ui/icons/Fingerprint";
+import x from '@material-ui/icons/Timelapse'
+
 // core components
 import GridContainer from "components/Grid/GridContainer.jsx";
 import GridItem from "components/Grid/GridItem.jsx";
@@ -57,8 +59,7 @@ class TreatmentSection extends React.Component
               <InfoArea
                title={treatmentData.blurb3.title}
                description={treatmentData.blurb3.content}
-               icon={ VerifiedUser }
-                icon={ Fingerprint }
+               icon={ x }
                 iconColor="danger"
                 vertical
               />
