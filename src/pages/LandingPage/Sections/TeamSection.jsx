@@ -22,6 +22,7 @@ import teamStyle from "assets/jss/material-kit-react/views/landingPageSections/t
 import abdelghaniImage from "assets/img/team/abdelghani.jpg";
 import kurkarImage from "assets/img/team/kurkar.jpg";
 import loughheadImage from "assets/img/team/loughhead.jpg";
+import emmaImage from "assets/img/team/emma.jpg";
 
 // Gatsby
 import { Link } from 'gatsby'
@@ -52,7 +53,7 @@ class TeamSection extends React.Component
         <div>
           <GridContainer>
             
-            <GridItem xs={ 12 } sm={ 12 } md={ 6}>
+            <GridItem xs={ 12 } sm={ 12 } md={ 4}>
               <Card plain>
                 <GridItem xs={ 12 } sm={ 12 } md={ 6 } className={ classes.itemGrid }>
                   <img src={ kurkarImage } alt="..." className={ imageClasses } />
@@ -72,7 +73,7 @@ class TeamSection extends React.Component
 
               </Card>
             </GridItem>
-            <GridItem xs={ 12 } sm={ 12 } md={ 6 }>
+            <GridItem xs={ 12 } sm={ 12 } md={ 4 }>
               <Card plain>
                 <GridItem xs={ 12 } sm={ 12 } md={ 6 } className={ classes.itemGrid }>
                   <img src={ loughheadImage } alt="..." className={ imageClasses } />
@@ -87,6 +88,25 @@ class TeamSection extends React.Component
                 <CardBody>
                   <p className={ classes.description }>
                     { teamData.loughhead.blurb }
+                  </p>
+                </CardBody>
+              </Card>
+            </GridItem>
+            <GridItem xs={ 12 } sm={ 12 } md={ 4 }>
+              <Card plain>
+                <GridItem xs={ 12 } sm={ 12 } md={ 6 } className={ classes.itemGrid }>
+                  <img src={ emmaImage } alt="..." className={ imageClasses } />
+                </GridItem>
+                <h4 className={ classes.cardTitle }>
+                  { teamData.emma.title } { teamData.emma.fname } { teamData.emma.sname }
+                  <br />
+                  <small className={ classes.smallTitle }>
+                    { teamData.emma.role }
+                  </small>
+                </h4>
+                <CardBody>
+                  <p className={ classes.description }>
+                    { teamData.emma.blurb }
                   </p>
                 </CardBody>
               </Card>
