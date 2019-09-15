@@ -54,15 +54,22 @@ const headerStyle = {
   title: {
     ...defaultFont,
     lineHeight: "30px",
-    fontSize: "18px",
+    fontSize: "1.5rem",
+    fontWeight: "400",
     borderRadius: "3px",
     textTransform: "none",
+    // textDecoration: "underline",
+    // textDecorationColor: roseColor,
     color: "inherit",
     padding: "8px 16px",
     "&:hover,&:focus": {
       color: "inherit",
       background: "transparent"
     }
+  },
+  logo: {
+    height: "3rem",
+    paddingRight:"10px"
   },
   appResponsive: {
     margin: "20px 10px"
@@ -74,10 +81,10 @@ const headerStyle = {
       "0 4px 20px 0px rgba(0, 0, 0, 0.14), 0 7px 12px -5px rgba(156, 39, 176, 0.46)"
   },
   info: {
-    backgroundColor: infoColor,
-    color: "#FFFFFF",
+    backgroundColor: "#C0C0C0",
+    color: "#222",
     boxShadow:
-      "0 4px 20px 0px rgba(0, 0, 0, 0.14), 0 7px 12px -5px rgba(0, 188, 212, 0.46)"
+      "0 4px 20px 0px rgba(0, 0, 0, 0.14), 0 7px 12px -5px rgba(224, 255, 255, 0.46)"
   },
   success: {
     backgroundColor: successColor,
@@ -119,7 +126,7 @@ const headerStyle = {
     border: "0",
     padding: "0.625rem 0",
     marginBottom: "20px",
-    color: "#555",
+    color: "#222",
     backgroundColor: "#fff !important",
     boxShadow:
       "0 4px 18px 0px rgba(0, 0, 0, 0.12), 0 7px 10px -5px rgba(0, 0, 0, 0.15)"

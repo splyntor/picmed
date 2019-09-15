@@ -2,6 +2,7 @@ import React from "react";
 // @material-ui/core components
 import withStyles from "@material-ui/core/styles/withStyles";
 import classNames from "classnames";
+import { Divider } from "@material-ui/core"
 // @material-ui/icons
 import Chat from "@material-ui/icons/Chat";
 import VerifiedUser from "@material-ui/icons/VerifiedUser";
@@ -13,6 +14,7 @@ import InfoArea from "components/InfoArea/InfoArea.jsx";
 
 import treatmentStyle from "assets/jss/material-kit-react/views/landingPageSections/treatmentStyle.jsx";
 import teamStyle from "assets/jss/material-kit-react/views/landingPageSections/teamStyle.jsx";
+import landingPageStyle from "assets/jss/material-kit-react/views/landingPage.jsx";
 
 // YAML data
 import introData from 'data/introData.yml'
@@ -41,28 +43,40 @@ class IntroSection extends React.Component
 
                             </h2>
                             <h5 className={ classes.description }>
-                                { introData.content.p1 }
+                                { introData.description.p1 }
                             </h5>
-                            <br/>
+                            <br />
                             <h5 className={ classes.description }>
-                                { introData.content.p2 }
+                                { introData.description.p2 }
                             </h5>
                         </GridItem>
                     </GridContainer>
+                    <Divider
+                        light
+                        variant="fullWidth"
+                    />
                 </div>
                 <div className={ classes.section }>
-                    <GridContainer>
-                        <GridItem xs={ 12 } sm={ 4 } md={ 4 }>
+                   
+
+                    <GridContainer justify="center">
+                        <GridItem xs={ 12 } sm={ 6 } md={ 4 }>
                             <img src={ abdelghaniImage } alt="..." className={ imageClasses } />
                         </GridItem>
-                        <GridItem xs={ 12 } sm={ 8 } md={ 8 }>
+                        <GridItem xs={ 12 } sm={ 6 } md={ 8 }>
+                            <h5 className={ classes.title }>
+                                { introData.abdelghani.title }
 
-                           asdasdasdaasda adasd as adasdas adasd adad
+                            </h5>
+                            <h5 className={ classes.description }>
+                                { introData.abdelghani.description }
+                            </h5>
                         </GridItem>
                     </GridContainer>
                 </div>
-             
             </div>
+
+
         );
     }
 }

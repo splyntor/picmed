@@ -10,7 +10,7 @@ import ListItem from "@material-ui/core/ListItem";
 import Tooltip from "@material-ui/core/Tooltip";
 
 // @material-ui/icons
-import { Home, People, PeopleOutline } from "@material-ui/icons";
+import { Home, People, PeopleOutline, Queue, Phone } from "@material-ui/icons";
 
 // React icons
 import { FaTwitter, FaFacebook, FaInstagram } from 'react-icons/fa';
@@ -21,81 +21,87 @@ import Button from "components/CustomButtons/Button.jsx";
 
 import headerLinksStyle from "assets/jss/material-kit-react/components/headerLinksStyle.jsx";
 
+
+
 function HeaderLinks ( { ...props } )
 {
   const { classes } = props;
+  // Default Props
+  ListItem.defaultProps = {
+    className: classes.listItem
+  }
+
+  CustomDropdown.defaultProps = {
+    hoverColor: 'info',
+    noLiPadding: true,
+    buttonProps: {
+      className: classes.navLink,
+      color: "transparent"
+    }
+  }
+
+  Link.defaultProps = { color: 'transparent' }
+
+
+
+  const teamMenu = () => (
+    [
+      <Link to='/' children='Dr. Mowafak Abdelghani' className={ classes.dropdownLink } />,
+      <Link to='/' children='Dr. Michael Kurkar' className={ classes.dropdownLink } />,
+      <Link to='/' children='Debbie Loughhead' className={ classes.dropdownLink } />
+    ]
+  )
+
+  const treatmentMenu = () => (
+    [
+      <Link to='/' children='Pharmacological' className={ classes.dropdownLink } />,
+      <Link to='/' children='Procedures' className={ classes.dropdownLink } />,
+      <Link to='/' children='Psychological Therapy' className={ classes.dropdownLink } />,
+      <Link to='/' children='Physical Therapy' className={ classes.dropdownLink } />
+    ]
+  )
+
+  const contactMenu = () => (
+    [
+      <Link to='/' children='Request Appointment' className={ classes.dropdownLink } />,
+      <Link to='/' children='Make a referral' className={ classes.dropdownLink } />,
+      <Link to='/' children='Clinics' className={ classes.dropdownLink } />,
+    ]
+  )
+
+
   return (
     <List className={ classes.list }>
-      <ListItem className={ classes.listItem }>
-        <Link
-          to='/'
-          color="transparent"
-          className={ classes.navLink }
-        >
-          <Home className={ classes.icons }/>
-          Home
+      <ListItem>
+        <Link to='/' className={ classes.navLink }>
+          <Home className={ classes.icons } />Home
         </Link>
       </ListItem>
-      <ListItem className={ classes.listItem }>
-        <Link
-          to='/'
-          color="transparent"
-          className={ classes.navLink }
-        >
-          <People className={ classes.icons } />Specialists
+      <ListItem>
+        <CustomDropdown
+          buttonText="Our Team"
+          buttonIcon={ People }
+          dropdownList={ teamMenu() }
+        />
+      </ListItem>
+      {/* <ListItem>
+        <CustomDropdown
+          buttonText="Treatments"
+          buttonIcon={ Queue }
+          dropdownList={ treatmentMenu() }
+        />
+      </ListItem> */}
+      <ListItem>
+        <Link to='/treatments' className={ classes.navLink }>
+          <Queue className={ classes.icons } />Treatments
         </Link>
       </ListItem>
-      <ListItem className={ classes.listItem }>
-        <Tooltip
-          id="instagram-twitter"
-          title="Follow us on twitter"
-          placement={ typeof window !== 'undefined' && window.innerWidth > 959 ? "top" : "left" }
-          classes={ { tooltip: classes.tooltip } }
-        >
-          <Button
-            href="https://twitter.com/CreativeTim"
-            target="_blank"
-            color="transparent"
-            className={ classes.navLink }
-          >
-            <FaTwitter />
-          </Button>
-        </Tooltip>
+      <ListItem>
+      <Link to='/contact' className={ classes.navLink }>
+          <Phone className={ classes.icons } />Contact
+        </Link>
       </ListItem>
-      <ListItem className={ classes.listItem }>
-        <Tooltip
-          id="instagram-facebook"
-          title="Follow us on facebook"
-          placement={ typeof window !== 'undefined' && window.innerWidth > 959 ? "top" : "left" }
-          classes={ { tooltip: classes.tooltip } }
-        >
-          <Button
-            color="transparent"
-            href="https://www.facebook.com/CreativeTim"
-            target="_blank"
-            className={ classes.navLink }
-          >
-            <FaFacebook />
-          </Button>
-        </Tooltip>
-      </ListItem>
-      <ListItem className={ classes.listItem }>
-        <Tooltip
-          id="instagram-tooltip"
-          title="Follow us on instagram"
-          placement={ typeof window !== 'undefined' && window.innerWidth > 959 ? "top" : "left" }
-          classes={ { tooltip: classes.tooltip } }
-        >
-          <Button
-            color="transparent"
-            href="https://www.instagram.com/CreativeTimOfficial"
-            target="_blank"
-            className={ classes.navLink }
-          >
-            <FaInstagram />
-          </Button>
-        </Tooltip>
-      </ListItem>
+
     </List>
   );
 }

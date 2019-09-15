@@ -52,8 +52,8 @@ class TeamSection extends React.Component
         <h2 className={ classes.title }>Here is our team</h2>
         <div>
           <GridContainer>
-            
-            <GridItem xs={ 12 } sm={ 12 } md={ 4}>
+
+            <GridItem xs={ 12 } sm={ 12 } md={ 4 }>
               <Card plain>
                 <GridItem xs={ 12 } sm={ 12 } md={ 6 } className={ classes.itemGrid }>
                   <img src={ kurkarImage } alt="..." className={ imageClasses } />

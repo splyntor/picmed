@@ -28,7 +28,7 @@ import TeamSection from "./Sections/TeamSection.jsx";
 
 // Images for this page
 // import bg1 from 'assets/img/x-N4QTBfNQ8Nk-unsplash.jpg'
-import bg1 from 'assets/img/bruce-mars-gJtDg6WfMlQ-unsplash.jpg'
+import bg1 from 'assets/img/bruce-mars-gJtDg6WfMlQ-unsplash-16_9.jpg'
 // YAML data
 import siteMetaData from 'data/siteMetaData.yml'
 import indexPageData from 'data/indexPageData.yml'
@@ -44,14 +44,14 @@ class LandingPage extends React.Component
 
     return (
       <div><Header
-        color="transparent"
+        color="white"
         routes={ dashboardRoutes }
         brand={ siteMetaData.title }
         rightLinks={ <HeaderLinks /> }
         fixed
         changeColorOnScroll={ {
           height: 400,
-          color: "white"
+          color: "info"
         } }
         { ...rest }
       />
@@ -65,8 +65,8 @@ class LandingPage extends React.Component
                 <h4>
                   { indexPageData.subtitle }
                 </h4>
-                
-               
+
+
               </GridItem>
             </GridContainer>
           </div>
@@ -76,7 +76,7 @@ class LandingPage extends React.Component
             <IntroSection />
             <TreatmentSection />
             <TeamSection />
-            {/* <WorkSection /> */}
+            {/* <WorkSection /> */ }
           </div>
         </div>
         <Footer />
