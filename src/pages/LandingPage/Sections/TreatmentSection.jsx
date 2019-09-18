@@ -6,13 +6,13 @@ import withStyles from '@material-ui/core/styles/withStyles'
 import mergeIcon from '@material-ui/icons/MergeType'
 import groupIcon from '@material-ui/icons/GroupTwoTone'
 import clockIcon from '@material-ui/icons/ScheduleTwoTone'
-import x from '@material-ui/icons/Timelapse'
+import multimodalIcon from '@iconify/icons-medical-icon/i-interpreter-services'
 
 // core components
 import GridContainer from 'components/Grid/GridContainer.jsx'
 import GridItem from 'components/Grid/GridItem.jsx'
 import InfoArea from 'components/InfoArea/InfoArea.jsx'
-
+import InfoAreaIconify  from 'components/InfoAreaIconify/InfoAreaIconify.jsx'
 import treatmentStyle from 'assets/jss/material-kit-react/views/landingPageSections/treatmentStyle.jsx'
 
 // YAML data
@@ -50,10 +50,17 @@ class TreatmentSection extends React.Component {
               />
             </GridItem>
             <GridItem xs={12} sm={12} md={4}>
-              <InfoArea
+              {/* <InfoArea
                 title={treatmentData.blurb3.title}
                 description={treatmentData.blurb3.content}
                 icon={mergeIcon}
+                iconColor="success"
+                vertical
+              /> */}
+              <InfoAreaIconify
+                title={treatmentData.blurb3.title}
+                description={treatmentData.blurb3.content}
+                icon={multimodalIcon}
                 iconColor="success"
                 vertical
               />

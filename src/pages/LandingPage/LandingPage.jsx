@@ -4,10 +4,10 @@ import classNames from 'classnames'
 // @material-ui/core components
 import withStyles from '@material-ui/core/styles/withStyles'
 
-// @material-ui/icons
+// Gatsby
+import {Link} from 'gatsby'
 
-// React icons
-import { FaPlay } from 'react-icons/fa'
+
 
 // core components
 import Header from 'components/Header/Header.jsx'
@@ -35,40 +35,40 @@ import indexPageData from 'data/indexPageData.yml'
 
 const dashboardRoutes = []
 
-class LandingPage extends React.Component {
-  render() {
+class LandingPage extends React.Component
+{
+  render ()
+  {
     const { classes, ...rest } = this.props
 
     return (
       <div>
         <Header
-          color="white"
-          routes={dashboardRoutes}
-          brand={siteMetaData.title}
-          rightLinks={<HeaderLinks />}
+          routes={ dashboardRoutes }
+          rightLinks={ <HeaderLinks /> }
           fixed
-          changeColorOnScroll={{
-            height: 400,
-            color: 'warning',
-          }}
-          {...rest}
+          { ...rest }
         />
-        <Parallax filter image={bg1}>
-          <div className={classes.container}>
+        <Parallax filter image={ bg1 }>
+          <div className={ classes.container }>
             <GridContainer>
-              <GridItem xs={12} sm={12} md={6}>
-                <h1 className={classes.title}>{indexPageData.title}</h1>
-                <h4>{indexPageData.subtitle}</h4>
+              <GridItem xs={ 12 } sm={ 12 } md={ 6 }>
+                <h1 className={ classes.title }>{ indexPageData.title }</h1>
+                <h4>
+                From initial assessment to treatment, we aim to provide a multimodal approach that utilises the specialised skills of our <strong>multidisciplinary team</strong> led by <strong>Dr. Mowafak Abdelghani</strong>, an expert in the management of chronic pain.
+
+                </h4>
               </GridItem>
             </GridContainer>
           </div>
         </Parallax>
-        <div className={classNames(classes.main, classes.mainRaised)}>
-          <div className={classes.container}>
+        <div className={ classNames( classes.main, classes.mainRaised ) }>
+          <div className={ classes.container }>
+
             <IntroSection />
             <TreatmentSection />
             <TeamSection />
-            {/* <WorkSection /> */}
+            {/* <WorkSection /> */ }
           </div>
         </div>
         <Footer />
@@ -77,4 +77,4 @@ class LandingPage extends React.Component {
   }
 }
 
-export default withStyles(landingPageStyle)(LandingPage)
+export default withStyles( landingPageStyle )( LandingPage )
