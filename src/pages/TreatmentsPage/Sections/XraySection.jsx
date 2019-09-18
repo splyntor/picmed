@@ -47,7 +47,7 @@ class XraySection extends React.Component
           <GridItem xs={ 12 } sm={ 12 } md={ 6 }>
             <InfoAreaIconify
               title='Epidural Injections'
-              description='Cervical, lumbar and caudal epidurals as well as Transforaminal Nerve Root Local Anaesthetic Blocks'
+              description='Cervical, lumbar and caudal epidurals as well as Transforaminal Nerve Root Blocks'
               icon={ spineIcon }
               iconColor='info'
               
