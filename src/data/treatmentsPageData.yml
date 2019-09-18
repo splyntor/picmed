@@ -1,0 +1,72 @@
+hero:
+  title: Personalised Treatment Plans
+  description: >-
+    At Picadilly Medical, Dr. Mowafak Abdelghani and his team are able to offer a variety of services ranging from simple treatments to more complex, image-guided procedures for the management of pain.
+intro:
+  title: Treatments and Procedures
+  description: >
+    Management of chronic pain requires a multi-modality approach that has to be customised to each individual. We are able to offer a wide range of interventions targeted at specific conditions with additional psychological and physiotherapy support. 
+procedures:
+  simple:
+    title: Simple Procedures
+    content:
+      - Trigger Point Injections
+      - Tender Point Injections
+      - High Dose Capsaicin Patch Application
+      - Lignocaine Infusions
+      - Botox Injections for Migraines
+      
+  xray:
+    title: X-ray Guided Procedures
+    description: Advanced treatments require the use of xray imaging to assist in targeting the area of interest. We are able to offer advanced x-ray guided treatments even in challenging situations.
+    content:
+      - title: Epidural injections
+        content: 
+          - Cervical
+          - Lumbar
+          - Caudal
+          - Transforaminal Nerve Root Local Anaesthetic Blocks
+      - title: Joint Injections
+        content: 
+          - Facet
+          - Sacroilliac
+          - Knee (Intra-atricular)
+          - Hip (Intra-articular)
+      - title: Local Anaesthetic Nerve Blocks
+        content:
+          - Diagnostic Medial Branch Block
+          - Nerve blocks of the Knee and Hip
+      - title: Radiofrequency Ablation
+        content: 
+          - Lumbar and Cervical Medial Branch Nerves
+          - RFA for Knee and Hip pain
+      - title: Pulsed Radiofrequency Ablation
+        content: 
+          - Suprascapular Nerve
+          - Cervical Ganglia
+          - Lumbar Dorsal Root Ganglia
+          - Sympathetic Ganglia Blocks with or without Radiofrequency Ablation
+      - title: Miscellaneous
+        content: 
+          - Neuroma and Scar Related Pain Injections
+          - Ganglion Impar Blocks
+  uss:
+    title: Ultrasound Guided Procedures
+    content: 
+      - title: Ultrasound Guided Nerve Blocks
+        content: 
+          - Suprascapular
+          - Piriformis
+          - Pudendal
+          - Genitofemoral
+          - Stellate Ganglion
+          - Inguinal Nerve Blocks
+      - title: Abdominal Pain
+        content: 
+          - ACNES Block
+      - title: Joint / Atricular Injections
+        content:
+          - Elbow
+          - Coccyx
+      - title: Injections for Migraine and Chronic Craniofacial Pain Syndromes
+        content: Greater Occipital and Supraorbital Nerve Block

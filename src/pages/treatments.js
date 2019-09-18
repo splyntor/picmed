@@ -1,6 +1,4 @@
 import React from 'react'
-import ServicesPage from './ServicesPage/ServicesPage'
+import ServicesPage from './TreatmentsPage/TreatmentsPage'
 
-export default () => (
-    <ServicesPage/>
-)
+export default () => <ServicesPage />
