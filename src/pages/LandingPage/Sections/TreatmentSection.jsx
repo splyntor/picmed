@@ -1,74 +1,68 @@
-import React from "react";
+import React from 'react'
 // @material-ui/core components
-import withStyles from "@material-ui/core/styles/withStyles";
+import withStyles from '@material-ui/core/styles/withStyles'
 
 // @material-ui/icons
-import Chat from "@material-ui/icons/Chat";
-import VerifiedUser from "@material-ui/icons/VerifiedUser";
-import Fingerprint from "@material-ui/icons/Fingerprint";
+import mergeIcon from '@material-ui/icons/MergeType'
+import groupIcon from '@material-ui/icons/GroupTwoTone'
+import clockIcon from '@material-ui/icons/ScheduleTwoTone'
 import x from '@material-ui/icons/Timelapse'
 
 // core components
-import GridContainer from "components/Grid/GridContainer.jsx";
-import GridItem from "components/Grid/GridItem.jsx";
-import InfoArea from "components/InfoArea/InfoArea.jsx";
+import GridContainer from 'components/Grid/GridContainer.jsx'
+import GridItem from 'components/Grid/GridItem.jsx'
+import InfoArea from 'components/InfoArea/InfoArea.jsx'
 
-import treatmentStyle from "assets/jss/material-kit-react/views/landingPageSections/treatmentStyle.jsx";
+import treatmentStyle from 'assets/jss/material-kit-react/views/landingPageSections/treatmentStyle.jsx'
 
 // YAML data
 import indexPageData from 'data/indexPageData.yml'
 import treatmentData from 'data/treatmentData.yml'
-class TreatmentSection extends React.Component
-{
-  render ()
-  {
-    const { classes } = this.props;
+class TreatmentSection extends React.Component {
+  render() {
+    const { classes } = this.props
     return (
-      <div className={ classes.section }>
+      <div className={classes.section}>
         <GridContainer justify="center">
-          <GridItem xs={ 12 } sm={ 12 } md={ 8 }>
-            <h2 className={ classes.title }>
-              { treatmentData.title }
-            </h2>
-            <h5 className={ classes.description }>
-              { treatmentData.content }
-            </h5>
+          <GridItem xs={12} sm={12} md={8}>
+            <h2 className={classes.title}>{treatmentData.title}</h2>
+            <h5 className={classes.description}>{treatmentData.content}</h5>
           </GridItem>
         </GridContainer>
         <div>
           <GridContainer>
-            <GridItem xs={ 12 } sm={ 12 } md={ 4 }>
+            <GridItem xs={12} sm={12} md={4}>
               <InfoArea
                 title={treatmentData.blurb1.title}
                 description={treatmentData.blurb1.content}
-                icon={ Chat }
+                icon={groupIcon}
                 iconColor="info"
                 vertical
               />
             </GridItem>
-            <GridItem xs={ 12 } sm={ 12 } md={ 4 }>
+            <GridItem xs={12} sm={12} md={4}>
               <InfoArea
                 title={treatmentData.blurb2.title}
                 description={treatmentData.blurb2.content}
-                icon={ VerifiedUser }
-                iconColor="success"
+                icon={clockIcon}
+                iconColor="danger"
                 vertical
               />
             </GridItem>
-            <GridItem xs={ 12 } sm={ 12 } md={ 4 }>
+            <GridItem xs={12} sm={12} md={4}>
               <InfoArea
-               title={treatmentData.blurb3.title}
-               description={treatmentData.blurb3.content}
-               icon={ x }
-                iconColor="danger"
+                title={treatmentData.blurb3.title}
+                description={treatmentData.blurb3.content}
+                icon={mergeIcon}
+                iconColor="success"
                 vertical
               />
             </GridItem>
           </GridContainer>
         </div>
       </div>
-    );
+    )
   }
 }
 
-export default withStyles( treatmentStyle )( TreatmentSection );
+export default withStyles(treatmentStyle)(TreatmentSection)
