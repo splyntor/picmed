@@ -46,7 +46,7 @@ function HeaderLinks ( { ...props } )
 
   const teamMenu = () => (
     [
-      <Link to='/' children='Dr. Mowafak Abdelghani' className={ classes.dropdownLink } />,
+      <Link to='/team/mowafak-abdelghani' children='Dr. Mowafak Abdelghani' className={ classes.dropdownLink } />,
       <Link to='/' children='Dr. Michael Kurkar' className={ classes.dropdownLink } />,
       <Link to='/' children='Debbie Loughhead' className={ classes.dropdownLink } />
     ]
@@ -97,7 +97,7 @@ function HeaderLinks ( { ...props } )
         </Link>
       </ListItem>
       <ListItem>
-      <Link to='/contact' className={ classes.navLink }>
+        <Link to='/contact' className={ classes.navLink }>
           <Phone className={ classes.icons } />Contact
         </Link>
       </ListItem>

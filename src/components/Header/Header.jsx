@@ -1,75 +1,64 @@
-import React from "react";
+import React from 'react'
 // nodejs library that concatenates classes
-import classNames from "classnames";
+import classNames from 'classnames'
 // nodejs library to set properties for components
-import PropTypes from "prop-types";
+import PropTypes from 'prop-types'
 // @material-ui/core components
-import withStyles from "@material-ui/core/styles/withStyles";
-import AppBar from "@material-ui/core/AppBar";
-import Toolbar from "@material-ui/core/Toolbar";
-import IconButton from "@material-ui/core/IconButton";
-import Button from "@material-ui/core/Button";
-import Hidden from "@material-ui/core/Hidden";
-import Drawer from "@material-ui/core/Drawer";
+import withStyles from '@material-ui/core/styles/withStyles'
+import AppBar from '@material-ui/core/AppBar'
+import Toolbar from '@material-ui/core/Toolbar'
+import IconButton from '@material-ui/core/IconButton'
+import Button from '@material-ui/core/Button'
+import Hidden from '@material-ui/core/Hidden'
+import Drawer from '@material-ui/core/Drawer'
 // @material-ui/icons
-import Menu from "@material-ui/icons/Menu";
+import Menu from '@material-ui/icons/Menu'
 // core components
-import headerStyle from "assets/jss/material-kit-react/components/headerStyle.jsx";
+import headerStyle from 'assets/jss/material-kit-react/components/headerStyle.jsx'
 import PicmedLogo from 'assets/img/picmed-logo-text-2.png'
-class Header extends React.Component
-{
-
-  constructor( props )
-  {
-    super( props );
+class Header extends React.Component {
+  constructor(props) {
+    super(props)
     this.state = {
-      mobileOpen: false
-    };
-    this.handleDrawerToggle = this.handleDrawerToggle.bind( this );
-    this.headerColorChange = this.headerColorChange.bind( this );
+      mobileOpen: false,
+    }
+    this.handleDrawerToggle = this.handleDrawerToggle.bind(this)
+    this.headerColorChange = this.headerColorChange.bind(this)
   }
-  handleDrawerToggle ()
-  {
-    this.setState( { mobileOpen: !this.state.mobileOpen } );
+  handleDrawerToggle() {
+    this.setState({ mobileOpen: !this.state.mobileOpen })
   }
-  componentDidMount ()
-  {
-    if ( this.props.changeColorOnScroll )
-    {
-      window.addEventListener( "scroll", this.headerColorChange );
+  componentDidMount() {
+    if (this.props.changeColorOnScroll) {
+      window.addEventListener('scroll', this.headerColorChange)
     }
   }
-  headerColorChange ()
-  {
-    const { classes, color, changeColorOnScroll } = this.props;
-    const windowsScrollTop = typeof window !== 'undefined' && window.pageYOffset;
-    if ( windowsScrollTop > changeColorOnScroll.height )
-    {
+  headerColorChange() {
+    const { classes, color, changeColorOnScroll } = this.props
+    const windowsScrollTop = typeof window !== 'undefined' && window.pageYOffset
+    if (windowsScrollTop > changeColorOnScroll.height) {
       document.body
-        .getElementsByTagName( "header" )[ 0 ]
-        .classList.remove( classes[ color ] );
+        .getElementsByTagName('header')[0]
+        .classList.remove(classes[color])
       document.body
-        .getElementsByTagName( "header" )[ 0 ]
-        .classList.add( classes[ changeColorOnScroll.color ] );
-    } else
-    {
+        .getElementsByTagName('header')[0]
+        .classList.add(classes[changeColorOnScroll.color])
+    } else {
       document.body
-        .getElementsByTagName( "header" )[ 0 ]
-        .classList.add( classes[ color ] );
+        .getElementsByTagName('header')[0]
+        .classList.add(classes[color])
       document.body
-        .getElementsByTagName( "header" )[ 0 ]
-        .classList.remove( classes[ changeColorOnScroll.color ] );
+        .getElementsByTagName('header')[0]
+        .classList.remove(classes[changeColorOnScroll.color])
     }
   }
-  componentWillUnmount ()
-  {
-    if ( this.props.changeColorOnScroll )
-    {
-      typeof window !== 'undefined' && window.removeEventListener( "scroll", this.headerColorChange );
+  componentWillUnmount() {
+    if (this.props.changeColorOnScroll) {
+      typeof window !== 'undefined' &&
+        window.removeEventListener('scroll', this.headerColorChange)
     }
   }
-  render ()
-  {
+  render() {
     const {
       classes,
       color,
@@ -77,41 +66,43 @@ class Header extends React.Component
       leftLinks,
       brand,
       fixed,
-      absolute
-    } = this.props;
-    const appBarClasses = classNames( {
-      [ classes.appBar ]: true,
-      [ classes[ color ] ]: color,
-      [ classes.absolute ]: absolute,
-      [ classes.fixed ]: fixed
-    } );
+      absolute,
+    } = this.props
+    const appBarClasses = classNames({
+      [classes.appBar]: true,
+      [classes[color]]: color,
+      [classes.absolute]: absolute,
+      [classes.fixed]: fixed,
+    })
     // Edit this to include logo to left of brand name
-    const brandComponent = <Button className={ classes.title }>
-      <img src={PicmedLogo} className={classes.logo}/>
-      {/* Remove title text as revised logo has text on side */}
-      {/* { brand } */}
-    </Button>;
+    const brandComponent = (
+      <Button className={classes.title}>
+        <img src={PicmedLogo} className={classes.logo} />
+        {/* Remove title text as revised logo has text on side */}
+        {/* { brand } */}
+      </Button>
+    )
     return (
-      <AppBar className={ appBarClasses }>
-        <Toolbar className={ classes.container }>
-          { leftLinks !== undefined ? brandComponent : null }
-          <div className={ classes.flex }>
-            { leftLinks !== undefined ? (
+      <AppBar className={appBarClasses}>
+        <Toolbar className={classes.container}>
+          {leftLinks !== undefined ? brandComponent : null}
+          <div className={classes.flex}>
+            {leftLinks !== undefined ? (
               <Hidden smDown implementation="css">
-                { leftLinks }
+                {leftLinks}
               </Hidden>
             ) : (
-                brandComponent
-              ) }
+              brandComponent
+            )}
           </div>
           <Hidden smDown implementation="css">
-            { rightLinks }
+            {rightLinks}
           </Hidden>
           <Hidden mdUp>
             <IconButton
               color="inherit"
               aria-label="open drawer"
-              onClick={ this.handleDrawerToggle }
+              onClick={this.handleDrawerToggle}
             >
               <Menu />
             </IconButton>
@@ -120,42 +111,41 @@ class Header extends React.Component
         <Hidden mdUp implementation="css">
           <Drawer
             variant="temporary"
-            anchor={ "right" }
-            open={ this.state.mobileOpen }
-            classes={ {
-              paper: classes.drawerPaper
-            } }
-            onClose={ this.handleDrawerToggle }
+            anchor={'right'}
+            open={this.state.mobileOpen}
+            classes={{
+              paper: classes.drawerPaper,
+            }}
+            onClose={this.handleDrawerToggle}
           >
-            <div className={ classes.appResponsive }>
-              { leftLinks }
-              { rightLinks }
+            <div className={classes.appResponsive}>
+              {leftLinks}
+              {rightLinks}
             </div>
           </Drawer>
         </Hidden>
       </AppBar>
-    );
+    )
   }
 }
 
 Header.defaultProp = {
-  color: "white"
-
-};
+  color: 'white',
+}
 
 Header.propTypes = {
   classes: PropTypes.object.isRequired,
-  color: PropTypes.oneOf( [
-    "primary",
-    "info",
-    "success",
-    "warning",
-    "danger",
-    "transparent",
-    "white",
-    "rose",
-    "dark"
-  ] ),
+  color: PropTypes.oneOf([
+    'primary',
+    'info',
+    'success',
+    'warning',
+    'danger',
+    'transparent',
+    'white',
+    'rose',
+    'dark',
+  ]),
   rightLinks: PropTypes.node,
   leftLinks: PropTypes.node,
   brand: PropTypes.string,
@@ -167,20 +157,20 @@ Header.propTypes = {
   // changeColorOnScroll.height and then when it is smaller than
   // changeColorOnScroll.height change it back to
   // this.props.color (see above)
-  changeColorOnScroll: PropTypes.shape( {
+  changeColorOnScroll: PropTypes.shape({
     height: PropTypes.number.isRequired,
-    color: PropTypes.oneOf( [
-      "primary",
-      "info",
-      "success",
-      "warning",
-      "danger",
-      "transparent",
-      "white",
-      "rose",
-      "dark"
-    ] ).isRequired
-  } )
-};
+    color: PropTypes.oneOf([
+      'primary',
+      'info',
+      'success',
+      'warning',
+      'danger',
+      'transparent',
+      'white',
+      'rose',
+      'dark',
+    ]).isRequired,
+  }),
+}
 
-export default withStyles( headerStyle )( Header );
+export default withStyles(headerStyle)(Header)
