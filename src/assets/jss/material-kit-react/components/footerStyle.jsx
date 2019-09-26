@@ -1,4 +1,10 @@
-import { container, primaryColor } from 'assets/jss/material-kit-react.jsx'
+import {
+  container,
+  brandBlueColor,
+  brandRedColor,
+  brandGreyColor,
+} from 'assets/jss/material-kit-react.jsx'
+import { title, cardTitle, grayColor } from 'assets/jss/material-kit-react.jsx'
 
 const footerStyle = {
   block: {
@@ -24,12 +30,40 @@ const footerStyle = {
   footer: {
     padding: '0.9375rem 0',
     textAlign: 'center',
-    display: 'flex',
+    display: 'block',
     zIndex: '2',
     position: 'relative',
+
+    // backgroundColor: '#50abff',
+  },
+  credits: {
+    display: 'flex',
+  },
+  footerContact: {
+    display: 'block',
+    marginTop: '10px',
+    marginBottom: '10px',
+    textAlign: 'center',
+    justifyContent: 'center !important',
+  },
+  title: {
+    ...title,
+    color: brandRedColor,
+    marginBottom: '1rem',
+    marginTop: '30px',
+    minHeight: '32px',
+    textDecoration: 'none',
+    textTransform: 'none',
+  },
+  subtitle: {
+    ...title,
+    // fontSize: '1.513rem',
+    // maxWidth: '500px',
+    margin: '10px auto 0',
+    color: brandGreyColor,
   },
   a: {
-    color: primaryColor,
+    color: brandBlueColor,
     textDecoration: 'none',
     backgroundColor: 'transparent',
   },
@@ -46,7 +80,7 @@ const footerStyle = {
   },
   inlineBlock: {
     display: 'inline-block',
-    padding: '0px',
+    padding: '10px',
     width: 'auto',
   },
   icon: {
