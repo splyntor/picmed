@@ -1,8 +1,7 @@
-import { title, cardTitle, grayColor,} from 'assets/jss/material-kit-react.jsx'
+import { title, cardTitle, grayColor } from 'assets/jss/material-kit-react.jsx'
 import imagesStyle from 'assets/jss/material-kit-react/imagesStyles.jsx'
 
-// This is the same as the landing page style. Careful when making changes.
-const treatmentsPageStyle = {
+const landingPageStyle = {
   section: {
     padding: '30px 0',
     textAlign: 'center',
@@ -29,8 +28,8 @@ const treatmentsPageStyle = {
     color: '#6c757d',
   },
   description: {
+    fontSize: '1rem',
     color: grayColor,
-    textAlign: 'left'
   },
   justifyCenter: {
     justifyContent: 'center !important',
@@ -51,4 +50,4 @@ const treatmentsPageStyle = {
   },
 }
 
-export default treatmentsPageStyle
+export default landingPageStyle
