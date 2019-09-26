@@ -1,4 +1,5 @@
-import {
+import
+{
   roseColor,
   primaryColor,
   infoColor,
@@ -7,7 +8,8 @@ import {
   dangerColor,
 } from 'assets/jss/material-kit-react.jsx'
 
-const navPillsStyle = theme => {
+const navPillsStyle = theme =>
+{
   return {
     root: {
       marginTop: '20px',
@@ -35,7 +37,7 @@ const navPillsStyle = theme => {
       position: 'relative',
       display: 'block',
       borderRadius: '30px',
-      minWidth: '100px',
+      minWidth: '75px',
       textAlign: 'center',
       transition: 'all .3s',
       padding: '10px 15px',
@@ -44,6 +46,10 @@ const navPillsStyle = theme => {
       opacity: '1',
       maxWidth: '100%',
       margin: '0 5px',
+      '@media (max-width: 575px)': {
+        margin: '0',
+        padding: '5px',
+      },
     },
     pillsWithIcons: {
       borderRadius: '4px',
@@ -73,6 +79,9 @@ const navPillsStyle = theme => {
       position: 'relative',
       display: 'block',
       color: 'inherit',
+      '@media (max-width: 575px)': {
+        display: 'none',
+      },
     },
     contentWrapper: {
       marginTop: '20px',

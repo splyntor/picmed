@@ -7,23 +7,21 @@ import { Link } from "gatsby";
 import withStyles from "@material-ui/core/styles/withStyles";
 import List from "@material-ui/core/List";
 import ListItem from "@material-ui/core/ListItem";
-import Tooltip from "@material-ui/core/Tooltip";
 
 // @material-ui/icons
-import { Home, People, PeopleOutline, Queue, Phone } from "@material-ui/icons";
+import Home from '@material-ui/icons/HomeOutlined'
+import People from '@material-ui/icons/PeopleOutlined'
+import Queue from '@material-ui/icons/QueueOutlined'
+import Phone from '@material-ui/icons/PhoneOutlined'
 
-// React icons
-import { FaTwitter, FaFacebook, FaInstagram } from 'react-icons/fa';
 
 // core components
 import CustomDropdown from "components/CustomDropdown/CustomDropdown.jsx";
-import Button from "components/CustomButtons/Button.jsx";
 
 import headerLinksStyle from "assets/jss/material-kit-react/components/headerLinksStyle.jsx";
 
 
-
-function HeaderLinks ( { ...props } )
+function HeaderLinks({ ...props })
 {
   const { classes } = props;
   // Default Props
@@ -44,61 +42,39 @@ function HeaderLinks ( { ...props } )
 
 
 
-  const teamMenu = () => (
-    [
-      <Link to='/team/mowafak-abdelghani' children='Dr. Mowafak Abdelghani' className={ classes.dropdownLink } />,
-      <Link to='/' children='Dr. Michael Kurkar' className={ classes.dropdownLink } />,
-      <Link to='/' children='Debbie Loughhead' className={ classes.dropdownLink } />
-    ]
-  )
 
-  const treatmentMenu = () => (
-    [
-      <Link to='/' children='Pharmacological' className={ classes.dropdownLink } />,
-      <Link to='/' children='Procedures' className={ classes.dropdownLink } />,
-      <Link to='/' children='Psychological Therapy' className={ classes.dropdownLink } />,
-      <Link to='/' children='Physical Therapy' className={ classes.dropdownLink } />
-    ]
-  )
 
-  const contactMenu = () => (
-    [
-      <Link to='/' children='Request Appointment' className={ classes.dropdownLink } />,
-      <Link to='/' children='Make a referral' className={ classes.dropdownLink } />,
-      <Link to='/' children='Clinics' className={ classes.dropdownLink } />,
-    ]
-  )
+
 
 
   return (
-    <List className={ classes.list }>
+    <List className={classes.list}>
       <ListItem>
-        <Link to='/' className={ classes.navLink }>
-          <Home className={ classes.icons } />Home
+        <Link to='/' className={classes.navLink}>
+          <Home className={classes.icons} />Home
         </Link>
       </ListItem>
-      <ListItem>
+      {/* <ListItem>
         <CustomDropdown
           buttonText="Our Team"
           buttonIcon={ People }
           dropdownList={ teamMenu() }
         />
-      </ListItem>
-      {/* <ListItem>
-        <CustomDropdown
-          buttonText="Treatments"
-          buttonIcon={ Queue }
-          dropdownList={ treatmentMenu() }
-        />
       </ListItem> */}
+
       <ListItem>
-        <Link to='/treatments' className={ classes.navLink }>
-          <Queue className={ classes.icons } />Treatments
+        <Link to='/team' className={classes.navLink}>
+          <People className={classes.icons} />Our Team
         </Link>
       </ListItem>
       <ListItem>
-        <Link to='/contact' className={ classes.navLink }>
-          <Phone className={ classes.icons } />Contact
+        <Link to='/treatments' className={classes.navLink}>
+          <Queue className={classes.icons} />Treatments
+        </Link>
+      </ListItem>
+      <ListItem>
+        <Link to='/contact' className={classes.navLink}>
+          <Phone className={classes.icons} />Contact
         </Link>
       </ListItem>
 
@@ -106,4 +82,4 @@ function HeaderLinks ( { ...props } )
   );
 }
 
-export default withStyles( headerLinksStyle )( HeaderLinks );
+export default withStyles(headerLinksStyle)(HeaderLinks);
