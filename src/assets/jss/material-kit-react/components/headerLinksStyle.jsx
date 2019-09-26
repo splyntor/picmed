@@ -1,6 +1,7 @@
-import { defaultFont } from 'assets/jss/material-kit-react.jsx'
+import { defaultFont, brandBlueColor } from 'assets/jss/material-kit-react.jsx'
 
 import tooltip from 'assets/jss/material-kit-react/tooltipsStyle.jsx'
+
 
 const headerLinksStyle = theme => {
   return {
@@ -33,6 +34,10 @@ const headerLinksStyle = theme => {
           backgroundColor: '#e5e5e5',
         },
       },
+      '&:hover,&:focus': {
+        color: 'inherit',
+        borderBottom:'3px solid ' + brandBlueColor,
+      }
     },
     listItemText: {
       padding: '0 !important',
