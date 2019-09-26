@@ -2,22 +2,24 @@ import React from 'react'
 // @material-ui/core components
 import withStyles from '@material-ui/core/styles/withStyles'
 
-// @material-ui/icons
-import mergeIcon from '@material-ui/icons/MergeType'
-import groupIcon from '@material-ui/icons/GroupTwoTone'
-import clockIcon from '@material-ui/icons/ScheduleTwoTone'
-import multimodalIcon from '@iconify/icons-medical-icon/i-interpreter-services'
-
 // core components
 import GridContainer from 'components/Grid/GridContainer.jsx'
 import GridItem from 'components/Grid/GridItem.jsx'
 import InfoArea from 'components/InfoArea/InfoArea.jsx'
 import InfoAreaIconify  from 'components/InfoAreaIconify/InfoAreaIconify.jsx'
-import treatmentStyle from 'assets/jss/material-kit-react/views/landingPageSections/treatmentStyle.jsx'
+
+// @material-ui/icons
+import groupIcon from '@material-ui/icons/GroupTwoTone'
+import clockIcon from '@material-ui/icons/ScheduleTwoTone'
+import multimodalIcon from '@iconify/icons-medical-icon/i-interpreter-services'
+
 
 // YAML data
-import indexPageData from 'data/indexPageData.yml'
 import treatmentData from 'data/treatmentData.yml'
+
+// style
+import defaultPageStyle from 'assets/jss/material-kit-react/pages/defaultPageStyle.jsx'
+
 class TreatmentSection extends React.Component {
   render() {
     const { classes } = this.props
@@ -72,4 +74,4 @@ class TreatmentSection extends React.Component {
   }
 }
 
-export default withStyles(treatmentStyle)(TreatmentSection)
+export default withStyles(defaultPageStyle)(TreatmentSection)

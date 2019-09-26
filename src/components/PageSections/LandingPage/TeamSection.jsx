@@ -4,27 +4,25 @@ import classNames from 'classnames'
 // @material-ui/core components
 import withStyles from '@material-ui/core/styles/withStyles'
 
-// @material-ui/icons
-
 // core components
 import GridContainer from 'components/Grid/GridContainer.jsx'
 import GridItem from 'components/Grid/GridItem.jsx'
-import Button from 'components/CustomButtons/Button.jsx'
 import Card from 'components/Card/Card.jsx'
 import CardBody from 'components/Card/CardBody.jsx'
-import CardFooter from 'components/Card/CardFooter.jsx'
 
-import teamStyle from 'assets/jss/material-kit-react/views/landingPageSections/teamStyle.jsx'
+// Gatsby
+import { Link } from 'gatsby'
 
+// Images
 import kurkarImage from 'assets/img/team/kurkar.jpg'
 import loughheadImage from 'assets/img/team/loughhead.jpg'
 import emmaImage from 'assets/img/team/emma.jpg'
 
-// Gatsby
-
 // YAML data
 import teamData from 'data/teamData.yml'
 
+// style
+import defaultPageStyle from 'assets/jss/material-kit-react/pages/defaultPageStyle.jsx'
 class TeamSection extends React.Component {
   render() {
     const { classes } = this.props
@@ -36,26 +34,32 @@ class TeamSection extends React.Component {
 
     return (
       <div className={classes.section}>
-        <h2 className={classes.title}>Our Team</h2>
+        <Link to="/team">
+          <h2 className={classes.title}>Our Team</h2>
+        </Link>
         <div>
           <GridContainer>
             <GridItem xs={12} sm={12} md={4}>
-              <Card plain>
-                <GridItem xs={12} sm={12} md={6} className={classes.itemGrid}>
-                  <img src={kurkarImage} alt="..." className={imageClasses} />
-                </GridItem>
-                <h4 className={classes.cardTitle}>
-                  {teamData.kurkar.title} {teamData.kurkar.fname}{' '}
-                  {teamData.kurkar.sname}
-                  <br />
-                  <small className={classes.smallTitle}>
-                    {teamData.kurkar.role}
-                  </small>
-                </h4>
-                <CardBody>
-                  <p className={classes.description}>{teamData.kurkar.blurb}</p>
-                </CardBody>
-              </Card>
+              <Link to="/team">
+                <Card plain>
+                  <GridItem xs={12} sm={12} md={6} className={classes.itemGrid}>
+                    <img src={kurkarImage} alt="..." className={imageClasses} />
+                  </GridItem>
+                  <h4 className={classes.cardTitle}>
+                    {teamData.kurkar.title} {teamData.kurkar.fname}{' '}
+                    {teamData.kurkar.sname}
+                    <br />
+                    <small className={classes.smallTitle}>
+                      {teamData.kurkar.role}
+                    </small>
+                  </h4>
+                  <CardBody>
+                    <p className={classes.description}>
+                      {teamData.kurkar.blurb}
+                    </p>
+                  </CardBody>
+                </Card>
+              </Link>
             </GridItem>
             <GridItem xs={12} sm={12} md={4}>
               <Card plain>
@@ -106,4 +110,4 @@ class TeamSection extends React.Component {
   }
 }
 
-export default withStyles(teamStyle)(TeamSection)
+export default withStyles(defaultPageStyle)(TeamSection)
