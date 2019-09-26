@@ -1,7 +1,21 @@
 // Bootstrap brand color customization
-$brand-primary: $purple !default;
-$brand-success: $green !default;
-$brand-danger: $red !default;
-$brand-warning: $orange !default;
-$brand-info: $cyan !default;
+
+// $brand-primary: $purple !default;
+// $brand-success: $green !default;
+// $brand-danger: $red !default;
+// $brand-warning: $orange !default;
+// $brand-info: $cyan !default;
+// $brand-rose: $pink !default;
+
+$brandBlueColor: #4eabff !default; //2FA0FF
+$brandRedColor: #c83228 !default;
+$brandGreenColor: #7CAE2A !default;
+$brandGreyColor: #2F4858 !default;
+
+
+$brand-primary: $brandBlueColor !default;
+$brand-success: $brandGreenColor !default;
+$brand-danger: $brandRedColor !default;
+$brand-warning: $brandRedColor !default;
+$brand-info: $brandBlueColor!default;
 $brand-rose: $pink !default;

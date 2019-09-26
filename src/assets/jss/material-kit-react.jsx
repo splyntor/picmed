@@ -55,8 +55,10 @@ const mainRaisedDefault = {
   // margin: "-60px 30px 0px",
   borderRadius: '6px',
   margin: '-60px 10px 0px',
-  boxShadow:
-    '0 16px 24px 2px rgba(0, 0, 0, 0.14), 0 6px 30px 5px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.2)',
+  // boxShadow:
+    // '0 16px 24px 2px rgba(0, 0, 0, 0.14), 0 6px 30px 5px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.2)',
+    boxShadow:
+    '0 16px 24px 2px rgba(200, 50, 50, 0.14), 0 6px 30px 5px rgba(78, 171, 255, 0.12), 0 8px 10px -5px rgba(78, 171, 255, 0.2)',
 }
 
 const mainRaised = {
@@ -97,13 +99,27 @@ const defaultFont = {
   lineHeight: '1.5em',
 }
 
-const primaryColor = '#9c27b0'
-const warningColor = '#ff9800'
-const dangerColor = '#f44336'
-const successColor = '#4caf50'
-const infoColor = '#00acc1'
+const brandBlueColor = '#4eabff' //'#2FA0FF'
+const brandRedColor = '#c83228'
+const brandGreenColor = '#7CAE2A'
+const brandGreyColor = '#2F4858'
+// Original values
+// const primaryColor = '#9c27b0'
+// const warningColor = '#ff9800'
+// const dangerColor = '#c93329' //'#f44336'
+// const successColor = '#4caf50'
+// const infoColor = '#50abff' //'#00acc1' //'#50abff'
+// const roseColor = '#e91e63'
+// const grayColor = '#333'
+
+const primaryColor = brandBlueColor
+const warningColor = brandRedColor
+const dangerColor = brandRedColor
+const successColor = brandGreenColor
+const infoColor = brandBlueColor
 const roseColor = '#e91e63'
-const grayColor = '#333'
+const grayColor = brandGreyColor
+
 
 const primaryBoxShadow = {
   boxShadow:
@@ -225,6 +241,10 @@ export {
   infoColor,
   roseColor,
   grayColor,
+  brandBlueColor,
+  brandRedColor,
+  brandGreenColor,
+  brandGreyColor,
   primaryBoxShadow,
   infoBoxShadow,
   successBoxShadow,
