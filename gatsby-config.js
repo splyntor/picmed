@@ -5,8 +5,6 @@ module.exports = {
   },
   plugins: [
     'gatsby-plugin-resolve-src',
-    'gatsby-plugin-react-helmet',
-    'gatsby-plugin-offline',
     'gatsby-plugin-sass',
     'gatsby-plugin-material-ui',
     'gatsby-transformer-sharp',
@@ -17,19 +15,27 @@ module.exports = {
       options: {
         path: './src/data/',
       },
+    }, {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        path: './src/assets/img/',
+      },
     },
     {
       resolve: 'gatsby-plugin-manifest',
       options: {
-        name: 'gatsby-starter-default',
-        short_name: 'starter',
+        name: 'Piccadilly Medical',
+        short_name: 'Piccadilly Medical',
         start_url: '/',
-        background_color: '#663399',
-        theme_color: '#663399',
+        background_color: '#4EABFF',
+        theme_color: '#4EABFF',
         display: 'minimal-ui',
         icon: 'src/assets/img/favicon.png', // This path is relative to the root of the site.
       },
     },
+    'gatsby-plugin-offline',
+    'gatsby-plugin-react-helmet',
+
     {
       resolve: 'gatsby-plugin-purgecss',
       options: {
