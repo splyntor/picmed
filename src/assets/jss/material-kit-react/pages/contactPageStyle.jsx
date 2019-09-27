@@ -2,13 +2,12 @@ import { container } from 'assets/jss/material-kit-react.jsx'
 import { title, cardTitle, grayColor } from 'assets/jss/material-kit-react.jsx'
 import imagesStyle from 'assets/jss/material-kit-react/imagesStyles.jsx'
 
-
 const contactPageStyle = {
   cardHidden: {
     opacity: '0',
     transform: 'translate3d(0, -60px, 0)',
   },
-  
+
   form: {
     margin: '0',
     border: '0',
@@ -60,7 +59,6 @@ const contactPageStyle = {
   margin5: {
     margin: '5px',
   },
-
 }
 
 export default contactPageStyle

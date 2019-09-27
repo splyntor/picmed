@@ -16,9 +16,9 @@ const defaultLayoutStyle = {
     textDecoration: 'none',
   },
   subtitle: {
-    fontSize: '1.313rem',
+    fontSize: '1.213rem',
     maxWidth: '500px',
-    margin: '10px auto 0',
+    margin: '50px auto 0',
   },
   main: {
     background: '#FFFFFF',
