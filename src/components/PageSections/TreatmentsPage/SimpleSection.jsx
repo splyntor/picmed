@@ -49,7 +49,15 @@ const SimpleSection = props => {
         <GridItem xs={12} sm={12} md={4}>
           <InfoAreaIconify
             title="Psychological support"
-            description={<>Expert mental health support from <Link to='/team#Kurkar'>Dr. Kurkar, Consultant Psychiatrist</Link> to improve psychological well-being</>}
+            description={
+              <>
+                Expert mental health support from{' '}
+                <Link to="/team#Kurkar">
+                  Dr. Kurkar, Consultant Psychiatrist
+                </Link>{' '}
+                to improve psychological well-being
+              </>
+            }
             icon={psychIcon}
             iconColor="info"
             vertical
@@ -58,7 +66,13 @@ const SimpleSection = props => {
         <GridItem xs={12} sm={12} md={4}>
           <InfoAreaIconify
             title="Physiotherapy"
-            description={<>Physical therapy and fitness advice from <Link to='/team#Loughhead'>Debbie Loughhead</Link>, our dedicated physiotherapist to help you progress</>}
+            description={
+              <>
+                Physical therapy and fitness advice from{' '}
+                <Link to="/team#Loughhead">Debbie Loughhead</Link>, our
+                dedicated physiotherapist to help you progress
+              </>
+            }
             icon={physioIcon}
             iconColor="danger"
             vertical

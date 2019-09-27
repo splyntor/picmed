@@ -1,19 +1,14 @@
 /* eslint-disable react/jsx-key */
 import React from 'react'
 
-import Carousel from 'react-slick'
 // @material-ui/core components
 import withStyles from '@material-ui/core/styles/withStyles'
 
-import Chat from '@material-ui/icons/Chat'
 
 // core components
 import GridContainer from 'components/Grid/GridContainer.jsx'
 import GridItem from 'components/Grid/GridItem.jsx'
-import Card from 'components/Card/Card.jsx'
-import CardBody from 'components/Card/CardBody.jsx'
 import InfoAreaIconify from 'components/InfoAreaIconify/InfoAreaIconify.jsx'
-import InfoArea from 'components/InfoArea/InfoArea.jsx'
 // YAML Data
 import treatmentsPageData from 'data/treatmentsPageData.yml'
 
@@ -25,8 +20,6 @@ import defaultPageStyle from 'assets/jss/material-kit-react/pages/defaultPageSty
 import brainIcon from '@iconify/icons-medical-icon/i-neurology'
 import waveIcon from '@iconify/icons-wpf/audio-wave'
 import surgeryIcon from '@iconify/icons-medical-icon/i-surgery'
-import spineIcon from '@iconify/icons-medical-icon/i-imaging-root-category'
-import physicalTherapyIcon from '@iconify/icons-medical-icon/i-physical-therapy'
 
 class UltrasoundSection extends React.Component {
   render() {
