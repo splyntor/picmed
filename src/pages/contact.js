@@ -9,6 +9,7 @@ import GridItem from 'components/Grid/GridItem.jsx'
 import heroImage from 'assets/img/marko-pekic-IpLa37Uj2Dw-unsplash.jpg'
 
 // Sections for this page
+import ContactIntroSection from 'components/PageSections/ContactPage/ContactIntroSection'
 import ContactForm from 'components/PageSections/ContactPage/ContactForm'
 import ClinicSection from 'components/PageSections/ContactPage/Clinics'
 
@@ -19,7 +20,9 @@ export default () => (
   <Layout
     heroImage={heroImage}
     heroTitle={data.intro.title}
-    heroSubtitle={data.intro.content}>
+    heroSubtitle={data.intro.content}
+  >
+    <ContactIntroSection />
     <GridContainer>
       <GridItem xs={12} sm={12} md={6}>
         <ContactForm />
@@ -27,7 +30,6 @@ export default () => (
       <GridItem xs={12} sm={12} md={6}>
         <ClinicSection />
       </GridItem>
-
     </GridContainer>
   </Layout>
 )
