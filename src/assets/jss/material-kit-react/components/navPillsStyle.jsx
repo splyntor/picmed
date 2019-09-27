@@ -1,5 +1,4 @@
-import
-{
+import {
   roseColor,
   primaryColor,
   infoColor,
@@ -8,8 +7,7 @@ import
   dangerColor,
 } from 'assets/jss/material-kit-react.jsx'
 
-const navPillsStyle = theme =>
-{
+const navPillsStyle = theme => {
   return {
     root: {
       marginTop: '20px',

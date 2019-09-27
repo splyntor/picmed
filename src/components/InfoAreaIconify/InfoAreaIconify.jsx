@@ -9,11 +9,10 @@ import withStyles from '@material-ui/core/styles/withStyles'
 import infoStyle from 'assets/jss/material-kit-react/components/infoStyle.jsx'
 
 // Iconify Component
-import { Icon, InlineIcon } from '@iconify/react';
+import { Icon, InlineIcon } from '@iconify/react'
 
 // Colors
-import
-{
+import {
   primaryColor,
   warningColor,
   dangerColor,
@@ -34,26 +33,35 @@ const colorMap = {
   gray: grayColor,
 }
 
-function InfoAreaIconify ( { ...props } )
-{
-  const { classes, title, description, icon, iconColor, iconWidth, iconHeight, vertical } = props
-  const iconWrapper = classNames( {
-    [ classes.iconWrapper ]: true,
-    [ classes[ iconColor ] ]: true,
-    [ classes.iconWrapperVertical ]: vertical,
-  } )
+function InfoAreaIconify({ ...props }) {
+  const {
+    classes,
+    title,
+    description,
+    icon,
+    iconColor,
+    iconWidth,
+    iconHeight,
+    vertical,
+  } = props
+  const iconWrapper = classNames({
+    [classes.iconWrapper]: true,
+    [classes[iconColor]]: true,
+    [classes.iconWrapperVertical]: vertical,
+  })
   return (
-    <div className={ classes.infoArea }>
-      <div className={ iconWrapper }>
+    <div className={classes.infoArea}>
+      <div className={iconWrapper}>
         <Icon
-          icon={ icon }
-          color={ colorMap[ iconColor ] }
-          width={ iconWidth }
-          height={ iconHeight } />
+          icon={icon}
+          color={colorMap[iconColor]}
+          width={iconWidth}
+          height={iconHeight}
+        />
       </div>
-      <div className={ classes.descriptionWrapper }>
-        <h4 className={ classes.title }>{ title }</h4>
-        <p className={ classes.description }>{ description }</p>
+      <div className={classes.descriptionWrapper}>
+        <h4 className={classes.title}>{title}</h4>
+        <p className={classes.description}>{description}</p>
       </div>
     </div>
   )
@@ -62,7 +70,7 @@ function InfoAreaIconify ( { ...props } )
 InfoAreaIconify.defaultProps = {
   iconColor: 'gray',
   iconWidth: 61,
-  iconHeight: 61
+  iconHeight: 61,
 }
 
 InfoAreaIconify.propTypes = {
@@ -70,7 +78,7 @@ InfoAreaIconify.propTypes = {
   icon: PropTypes.func.isRequired,
   title: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
-  iconColor: PropTypes.oneOf( [
+  iconColor: PropTypes.oneOf([
     'primary',
     'warning',
     'danger',
@@ -78,10 +86,10 @@ InfoAreaIconify.propTypes = {
     'info',
     'rose',
     'gray',
-  ] ),
+  ]),
   iconWidth: PropTypes.number,
   iconHeight: PropTypes.number,
   vertical: PropTypes.bool,
 }
 
-export default withStyles( infoStyle )( InfoAreaIconify )
+export default withStyles(infoStyle)(InfoAreaIconify)

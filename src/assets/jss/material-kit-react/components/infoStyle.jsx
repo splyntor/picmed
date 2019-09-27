@@ -58,7 +58,7 @@ const infoStyle = {
   },
   iconWrapperVertical: {
     float: 'none',
-    textAlign: 'center'
+    textAlign: 'center',
   },
   iconVertical: {
     width: '61px',

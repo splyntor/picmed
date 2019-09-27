@@ -56,8 +56,8 @@ const mainRaisedDefault = {
   borderRadius: '6px',
   margin: '-60px 10px 0px',
   // boxShadow:
-    // '0 16px 24px 2px rgba(0, 0, 0, 0.14), 0 6px 30px 5px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.2)',
-    boxShadow:
+  // '0 16px 24px 2px rgba(0, 0, 0, 0.14), 0 6px 30px 5px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.2)',
+  boxShadow:
     '0 16px 24px 2px rgba(200, 50, 50, 0.14), 0 6px 30px 5px rgba(78, 171, 255, 0.12), 0 8px 10px -5px rgba(78, 171, 255, 0.2)',
 }
 
@@ -119,7 +119,6 @@ const successColor = brandGreenColor
 const infoColor = brandBlueColor
 const roseColor = '#e91e63'
 const grayColor = brandGreyColor
-
 
 const primaryBoxShadow = {
   boxShadow:
