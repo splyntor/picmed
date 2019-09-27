@@ -13,20 +13,22 @@ import Hidden from '@material-ui/core/Hidden'
 import Drawer from '@material-ui/core/Drawer'
 // @material-ui/icons
 import Menu from '@material-ui/icons/Menu'
-import PhoneIcon from '@material-ui/icons/Phone'
-import EmailIcon from '@material-ui/icons/EmailOutlined'
 // core components
 import headerStyle from 'assets/jss/material-kit-react/components/headerStyle.jsx'
 import PicmedLogo from 'assets/img/picmed-logo-text-2.png'
+
+// Contact Components
+import {
+  PhoneIconButton,
+  EmailIconButton,
+} from 'components/PageSections/ContactPage/PhoneEmail'
 
 // Data
 import data from 'data/siteMetaData.yml'
 import HeaderLinks from './HeaderLinks.jsx'
 
-class Header extends React.Component
-{
-  constructor(props)
-  {
+class Header extends React.Component {
+  constructor(props) {
     super(props)
     this.state = {
       mobileOpen: false,
@@ -34,31 +36,25 @@ class Header extends React.Component
     this.handleDrawerToggle = this.handleDrawerToggle.bind(this)
     this.headerColorChange = this.headerColorChange.bind(this)
   }
-  handleDrawerToggle()
-  {
+  handleDrawerToggle() {
     this.setState({ mobileOpen: !this.state.mobileOpen })
   }
-  componentDidMount()
-  {
-    if (this.props.changeColorOnScroll)
-    {
+  componentDidMount() {
+    if (this.props.changeColorOnScroll) {
       window.addEventListener('scroll', this.headerColorChange)
     }
   }
-  headerColorChange()
-  {
+  headerColorChange() {
     const { classes, color, changeColorOnScroll } = this.props
     const windowsScrollTop = typeof window !== 'undefined' && window.pageYOffset
-    if (windowsScrollTop > changeColorOnScroll.height)
-    {
+    if (windowsScrollTop > changeColorOnScroll.height) {
       document.body
         .getElementsByTagName('header')[0]
         .classList.remove(classes[color])
       document.body
         .getElementsByTagName('header')[0]
         .classList.add(classes[changeColorOnScroll.color])
-    } else
-    {
+    } else {
       document.body
         .getElementsByTagName('header')[0]
         .classList.add(classes[color])
@@ -67,16 +63,13 @@ class Header extends React.Component
         .classList.remove(classes[changeColorOnScroll.color])
     }
   }
-  componentWillUnmount()
-  {
-    if (this.props.changeColorOnScroll)
-    {
+  componentWillUnmount() {
+    if (this.props.changeColorOnScroll) {
       typeof window !== 'undefined' &&
         window.removeEventListener('scroll', this.headerColorChange)
     }
   }
-  render()
-  {
+  render() {
     const {
       classes,
       color,
@@ -110,18 +103,12 @@ class Header extends React.Component
                 {leftLinks}
               </Hidden>
             ) : (
-                brandComponent
-              )}
+              brandComponent
+            )}
           </div>
           <Hidden mdUp>
-            <IconButton
-              href='tel:+441614476638'>
-              <PhoneIcon />
-            </IconButton>
-            <IconButton
-              href='mailto:info@piccadillymedical.com?Subject=Request%20for%20information' >
-              <EmailIcon />
-            </IconButton>
+            <PhoneIconButton className={classes.brandRed} />
+            <EmailIconButton className={classes.brandRed} />
           </Hidden>
           <Hidden smDown implementation="css">
             {rightLinks}
@@ -135,7 +122,6 @@ class Header extends React.Component
               <Menu />
             </IconButton>
           </Hidden>
-
         </Toolbar>
         <Hidden mdUp implementation="css">
           <Drawer
@@ -162,7 +148,7 @@ Header.defaultProp = {
   color: 'white',
   changeColorOnScroll: {
     height: 400,
-    color: 'white'
+    color: 'white',
   },
 }
 

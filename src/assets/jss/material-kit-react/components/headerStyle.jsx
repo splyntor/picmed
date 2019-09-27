@@ -1,6 +1,9 @@
 import {
   container,
   defaultFont,
+  brandRedColor,
+  brandBlueColor,
+  brandGreyColor,
   primaryColor,
   infoColor,
   successColor,
@@ -19,7 +22,7 @@ const headerStyle = {
     borderRadius: '3px',
     padding: '0.625rem 0',
     marginBottom: '20px',
-    color: '#555',
+    color: brandGreyColor, //'#555',
     width: '100%',
     backgroundColor: '#fff',
     boxShadow:
@@ -152,6 +155,13 @@ const headerStyle = {
     paddingRight: '0px',
     paddingLeft: '0',
     ...transition,
+  },
+  brandRed: {
+    color: brandRedColor,
+  },
+
+  brandBlue: {
+    color: brandBlueColor,
   },
 }
 
