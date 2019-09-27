@@ -9,6 +9,9 @@ import { Divider } from '@material-ui/core'
 import GridContainer from 'components/Grid/GridContainer.jsx'
 import GridItem from 'components/Grid/GridItem.jsx'
 
+// Gatsby
+import { Link } from 'gatsby'
+
 // Images
 import abdelghaniImage from 'assets/img/team/abdelghani-tie.jpg'
 
@@ -23,7 +26,8 @@ class IntroSection extends React.Component {
     const imageClasses = classNames(
       classes.imgRaised,
       classes.imgRoundedCircle,
-      classes.imgFluid
+      classes.imgFluid,
+      classes.imgZoom
     )
 
     return (
@@ -56,7 +60,9 @@ class IntroSection extends React.Component {
         <section className={classes.section}>
           <GridContainer justify="center">
             <GridItem xs={12} sm={12} md={4}>
-              <img src={abdelghaniImage} alt="..." className={imageClasses} />
+              <Link to="/team">
+                <img src={abdelghaniImage} alt="..." className={imageClasses} />
+              </Link>
             </GridItem>
             <GridItem xs={12} sm={12} md={8}>
               <h3 className={classes.title}>{introData.abdelghani.title}</h3>

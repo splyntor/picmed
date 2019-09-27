@@ -12,6 +12,7 @@ import heroImage from 'assets/img/bruce-mars-gJtDg6WfMlQ-unsplash-16_9.jpg'
 import IntroSection from 'components/PageSections/LandingPage/IntroSection'
 import TreatmentSection from 'components/PageSections/LandingPage/TreatmentSection'
 import TeamSection from 'components/PageSections/LandingPage/TeamSection'
+import InsurersSection from 'components/PageSections/Partners/Insurers.jsx'
 
 export default () => (
   <Layout
@@ -30,5 +31,6 @@ export default () => (
     <IntroSection />
     <TreatmentSection />
     <TeamSection />
+    <InsurersSection />
   </Layout>
 )

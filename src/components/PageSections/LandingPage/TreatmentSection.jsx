@@ -6,13 +6,12 @@ import withStyles from '@material-ui/core/styles/withStyles'
 import GridContainer from 'components/Grid/GridContainer.jsx'
 import GridItem from 'components/Grid/GridItem.jsx'
 import InfoArea from 'components/InfoArea/InfoArea.jsx'
-import InfoAreaIconify  from 'components/InfoAreaIconify/InfoAreaIconify.jsx'
+import InfoAreaIconify from 'components/InfoAreaIconify/InfoAreaIconify.jsx'
 
 // @material-ui/icons
 import groupIcon from '@material-ui/icons/GroupTwoTone'
 import clockIcon from '@material-ui/icons/ScheduleTwoTone'
 import multimodalIcon from '@iconify/icons-medical-icon/i-interpreter-services'
-
 
 // YAML data
 import treatmentData from 'data/treatmentData.yml'

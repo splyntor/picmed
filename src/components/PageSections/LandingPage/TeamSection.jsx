@@ -40,7 +40,7 @@ class TeamSection extends React.Component {
         <div>
           <GridContainer>
             <GridItem xs={12} sm={12} md={4}>
-              <Link to="/team">
+              <Link to={'/team#' + teamData.kurkar.sname}>
                 <Card plain>
                   <GridItem xs={12} sm={12} md={6} className={classes.itemGrid}>
                     <img src={kurkarImage} alt="..." className={imageClasses} />
@@ -62,46 +62,50 @@ class TeamSection extends React.Component {
               </Link>
             </GridItem>
             <GridItem xs={12} sm={12} md={4}>
-              <Card plain>
-                <GridItem xs={12} sm={12} md={6} className={classes.itemGrid}>
-                  <img
-                    src={loughheadImage}
-                    alt="..."
-                    className={imageClasses}
-                  />
-                </GridItem>
-                <h4 className={classes.cardTitle}>
-                  {teamData.loughhead.title} {teamData.loughhead.fname}{' '}
-                  {teamData.loughhead.sname}
-                  <br />
-                  <small className={classes.smallTitle}>
-                    {teamData.loughhead.role}
-                  </small>
-                </h4>
-                <CardBody>
-                  <p className={classes.description}>
-                    {teamData.loughhead.blurb}
-                  </p>
-                </CardBody>
-              </Card>
+              <Link to={'/team#' + teamData.loughhead.sname}>
+                <Card plain>
+                  <GridItem xs={12} sm={12} md={6} className={classes.itemGrid}>
+                    <img
+                      src={loughheadImage}
+                      alt="..."
+                      className={imageClasses}
+                    />
+                  </GridItem>
+                  <h4 className={classes.cardTitle}>
+                    {teamData.loughhead.title} {teamData.loughhead.fname}{' '}
+                    {teamData.loughhead.sname}
+                    <br />
+                    <small className={classes.smallTitle}>
+                      {teamData.loughhead.role}
+                    </small>
+                  </h4>
+                  <CardBody>
+                    <p className={classes.description}>
+                      {teamData.loughhead.blurb}
+                    </p>
+                  </CardBody>
+                </Card>
+              </Link>
             </GridItem>
             <GridItem xs={12} sm={12} md={4}>
-              <Card plain>
-                <GridItem xs={12} sm={12} md={6} className={classes.itemGrid}>
-                  <img src={emmaImage} alt="..." className={imageClasses} />
-                </GridItem>
-                <h4 className={classes.cardTitle}>
-                  {teamData.emma.title} {teamData.emma.fname}{' '}
-                  {teamData.emma.sname}
-                  <br />
-                  <small className={classes.smallTitle}>
-                    {teamData.emma.role}
-                  </small>
-                </h4>
-                <CardBody>
-                  <p className={classes.description}>{teamData.emma.blurb}</p>
-                </CardBody>
-              </Card>
+              <Link to={'/team#' + teamData.emma.fname}>
+                <Card plain>
+                  <GridItem xs={12} sm={12} md={6} className={classes.itemGrid}>
+                    <img src={emmaImage} alt="..." className={imageClasses} />
+                  </GridItem>
+                  <h4 className={classes.cardTitle}>
+                    {teamData.emma.title} {teamData.emma.fname}{' '}
+                    {teamData.emma.sname}
+                    <br />
+                    <small className={classes.smallTitle}>
+                      {teamData.emma.role}
+                    </small>
+                  </h4>
+                  <CardBody>
+                    <p className={classes.description}>{teamData.emma.blurb}</p>
+                  </CardBody>
+                </Card>
+              </Link>
             </GridItem>
           </GridContainer>
         </div>
