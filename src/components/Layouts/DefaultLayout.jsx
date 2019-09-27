@@ -30,15 +30,14 @@ function DefaultLayout({ ...props }) {
         <div className={classes.container}>
           <GridContainer>
             <GridItem xs={12} sm={12} md={6}>
-              <h1 className={classes.title}>{heroTitle}</h1>
-              <h4 className={classes.subtitle}>{heroSubtitle}</h4>
+              <h2 className={classes.title}>{heroTitle}</h2>
+              <h5 className={classes.subtitle}>{heroSubtitle}</h5>
             </GridItem>
           </GridContainer>
         </div>
       </Parallax>
       <div className={classNames(classes.main, classes.mainRaised)}>
         <div className={classes.container}>{children}</div>
-
       </div>
       <Footer />
     </div>
