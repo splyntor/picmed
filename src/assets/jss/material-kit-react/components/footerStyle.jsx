@@ -59,6 +59,7 @@ const footerStyle = {
     ...title,
     // fontSize: '1.513rem',
     // maxWidth: '500px',
+    fontWeight: '600',
     margin: '10px auto 0',
     color: brandGreyColor,
   },
