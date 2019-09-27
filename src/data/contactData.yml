@@ -1,0 +1,33 @@
+intro:
+  title: How can we help?
+  content: >
+    If you would like to enquire about Piccadilly Medical or any of our services, please get in touch with us.
+    Contact us by telephone, e-mail, or using the contact form.
+    We would be delighted to hear from you or answer any questions that you may have.
+
+phone: 0123456789
+email: info@piccadillymedical.com
+
+bmiAlex:
+  title: The Alexandra Hospital
+  tabtitle: Alexandra Hospital
+  street: Mill Lane
+  town: Cheadle
+  county: Cheshire
+  postcode: SK8 2PX
+
+bmiHigh: 
+  title: The Highfield Hospital
+  tabtitle: BMI Highfield
+  street: Manchester Road
+  town: Rochdale
+  county: Lancashire
+  postcode: OL11 4LZ
+ 
+spire:
+  title: Spire Manchester Hospital
+  tabtitle: Spire Manchester
+  street: 170 Barlow Moor Road
+  town: Didsbury
+  county: Manchester
+  postcode: M20 2AF  
