@@ -31,8 +31,8 @@ const parallaxStyle = {
     height: '380px',
   },
   medium: {
-    height: '450px'
-  }
+    height: '450px',
+  },
 }
 
 export default parallaxStyle
