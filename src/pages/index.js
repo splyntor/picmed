@@ -5,6 +5,9 @@ import 'assets/scss/material-kit-react.scss?v=1.4.0'
 import 'typeface-roboto'
 import 'typeface-roboto-slab'
 
+// SEO
+import SEO from 'components/SEO/SEO'
+
 // HeroImage
 import heroImage from 'assets/img/bruce-mars-gJtDg6WfMlQ-unsplash-16_9.jpg'
 
@@ -28,6 +31,7 @@ export default () => (
       </>
     }
   >
+    <SEO title='Home'/>
     <IntroSection />
     <TreatmentSection />
     <TeamSection />
