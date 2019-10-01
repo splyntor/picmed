@@ -1,12 +1,14 @@
 import { ldAbdelghani } from './people'
 import { ldPainServices } from './services'
 
+// Images
+import PicmedLogo from 'assets/img/picmed-logo-text-2.png'
 export const ldPicMed = {
   '@type': 'MedicalClinic',
   name: 'Piccadilly Medical',
   description:
     'Piccadilly Medical is the leading chronic pain management service in Manchester helping patients with back pain, arthritis, migraine, neuropathic pain and after surgery.',
-  image: 'https://piccadillymedical.com/picmed-logo.png',
+  image: PicmedLogo,
   url: 'https://piccadillymedical.com/',
   // "logo": "https://piccadillymedical.com/picmed-logo.png",
   // "mainEntityofPage": "https://piccadillymedical.com/",

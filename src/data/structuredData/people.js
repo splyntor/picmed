@@ -8,7 +8,6 @@ import loughheadProfileImage from 'assets/img/team/loughhead.jpg'
 import kurkarProfileImage from 'assets/img/team/kurkar.jpg'
 
 export const ldAbdelghani = {
-  '@context': 'https://schema.org',
   '@type': 'Person',
   name: 'Dr. Mowafak Abdelghani',
   givenName: 'Mowafak',
@@ -46,7 +45,6 @@ export const ldAbdelghani = {
 }
 
 export const ldKurkar = {
-  '@context': 'https://schema.org',
   '@type': 'Person',
   givenName: 'Michael',
   familyName: 'Kurkar',
@@ -57,7 +55,6 @@ export const ldKurkar = {
 }
 
 export const ldLoughhead = {
-  '@context': 'https://schema.org',
   '@type': 'Person',
   givenName: 'Debbie',
   familyName: 'Loughhead',
