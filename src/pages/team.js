@@ -22,6 +22,16 @@ import kurkarProfileImage from 'assets/img/team/kurkar.jpg'
 // Data
 import teamData from 'data/teamData.yml'
 
+// SEO
+import SEO from 'components/SEO/SEO'
+import StructuredData from '../components/SEO/StructuredData'
+import ldPicMed from '../data/structuredData/picmed'
+import {
+  ldAbdelghani,
+  ldKurkar,
+  ldLoughhead,
+} from '../data/structuredData/people'
+
 export default () => (
   <Layout
     heroImage={heroImage}
@@ -36,6 +46,12 @@ export default () => (
       </>
     }
   >
+    <SEO title="Specialists" />
+    <StructuredData {...ldPicMed} />
+    <StructuredData {...ldAbdelghani} />
+    <StructuredData {...ldKurkar} />
+    <StructuredData {...ldLoughhead} />
+
     <GridContainer>
       <GridItem xs={12} sm={12} md={12}>
         <AbdelghaniSection />
