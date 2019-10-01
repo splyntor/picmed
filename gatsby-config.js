@@ -6,6 +6,7 @@ module.exports = {
     description:
       'Dr. Abdelghani is a leading chronic pain specialist in Manchester helping patients with back pain, arthritis, migraine, neuropathic pain and after surgery.',
     url: 'https://piccadillymedical.com',
+    siteUrl: 'https://piccadillymedical.com',
     image: '/assets/img/src/abdelghani-tie.jpg',
     twitterUsername: '@PainDocUK'
 
