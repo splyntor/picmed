@@ -10,7 +10,6 @@ import InfoArea from 'components/InfoArea/InfoArea.jsx'
 import PhoneIcon from '@material-ui/icons/Phone'
 import EmailIcon from '@material-ui/icons/EmailOutlined'
 
-
 // Data
 import data from 'data/siteMetaData.yml'
 

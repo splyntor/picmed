@@ -14,13 +14,10 @@ import EmailIcon from '@material-ui/icons/Email'
 import PeopleIcon from '@material-ui/icons/People'
 import PhoneIcon from '@material-ui/icons/Phone'
 
-
 // Style
 import contactPageStyle from 'assets/jss/material-kit-react/pages/contactPageStyle.jsx'
 
 class ContactForm extends React.Component {
- 
- 
   render() {
     const { classes } = this.props
     return (

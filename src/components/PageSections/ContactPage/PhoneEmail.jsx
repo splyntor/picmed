@@ -9,8 +9,7 @@ import EmailIcon from '@material-ui/icons/EmailOutlined'
 
 // Data
 import data from 'data/siteMetaData.yml'
-export const PhoneIconButton = props =>
-{
+export const PhoneIconButton = props => {
   const { className, ...rest } = props
   return (
     <IconButton className={className} href={'tel:' + data.contact.phone}>
@@ -19,8 +18,7 @@ export const PhoneIconButton = props =>
   )
 }
 
-export const EmailIconButton = props =>
-{
+export const EmailIconButton = props => {
   const { className, ...rest } = props
   return (
     <IconButton

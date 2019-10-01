@@ -10,8 +10,6 @@ import Card from 'components/Card/Card.jsx'
 import CardHeader from 'components/Card/CardHeader.jsx'
 import CardBody from 'components/Card/CardBody.jsx'
 
-
-
 // Style
 import defaultPageStyle from 'assets/jss/material-kit-react/pages/defaultPageStyle.jsx'
 

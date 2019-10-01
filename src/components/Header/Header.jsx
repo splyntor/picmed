@@ -87,7 +87,7 @@ class Header extends React.Component {
     })
     // Edit this to include logo to left of brand name
     const brandComponent = (
-      <Button className={classes.title} href='/'>
+      <Button className={classes.title} href="/">
         <img src={PicmedLogo} className={classes.logo} alt={data.title} />
         {/* Remove title text as revised logo has text on side */}
         {/* { brand } */}

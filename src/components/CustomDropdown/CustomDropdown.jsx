@@ -87,7 +87,7 @@ class CustomDropdown extends React.Component {
     switch (typeof buttonIcon) {
       case 'function':
         icon = <this.props.buttonIcon className={classes.buttonIcon} />
-      break
+        break
       case 'string':
         icon = (
           <Icon className={classes.buttonIcon}>{this.props.buttonIcon}</Icon>
@@ -95,7 +95,7 @@ class CustomDropdown extends React.Component {
         break
       default:
         icon = null
-      break
+        break
     }
     return (
       <div
