@@ -1,7 +1,15 @@
 module.exports = {
   pathPrefix: '/mini-gatsbyv2-material-kit-react',
   siteMetadata: {
-    title: 'Picadilly Medical',
+    title: 'Piccadilly Medical',
+    titleTemplate: 'Piccadilly Medical - %s',
+    description:
+      'Dr. Abdelghani is a leading chronic pain specialist in Manchester helping patients with back pain, arthritis, migraine, neuropathic pain and after surgery.',
+    url: 'https://piccadillymedical.com',
+    siteUrl: 'https://piccadillymedical.com',
+    image: '/assets/img/src/abdelghani-tie.jpg',
+    twitterUsername: '@PainDocUK'
+
   },
   plugins: [
     'gatsby-plugin-resolve-src',
@@ -15,7 +23,8 @@ module.exports = {
       options: {
         path: './src/data/',
       },
-    }, {
+    },
+    {
       resolve: 'gatsby-source-filesystem',
       options: {
         path: './src/assets/img/',
@@ -29,12 +38,13 @@ module.exports = {
         start_url: '/',
         background_color: '#4EABFF',
         theme_color: '#4EABFF',
-        display: 'minimal-ui',
+        display: 'standalone',
         icon: 'src/assets/img/favicon.png', // This path is relative to the root of the site.
       },
     },
     'gatsby-plugin-offline',
     'gatsby-plugin-react-helmet',
+    'gatsby-plugin-advanced-sitemap',
 
     {
       resolve: 'gatsby-plugin-purgecss',

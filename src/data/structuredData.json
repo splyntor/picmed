@@ -1,0 +1,95 @@
+{
+  "@context": "https://schema.org",
+  "@type": "MedicalClinic",
+  "name": "Picaddilly Medical",
+  "image": "https://piccadillymedical.com/assets/img/picmed-logo-text-2.png",
+  "url": "https://piccadillymedical.com/",
+  "logo": "https://piccadillymedical.com/assets/img/picmed-logo-text-2.png",
+  "availableService": [
+    {
+      "@type": "MedicalProcedure",
+      "name": "Epidural Injection",
+      "description": "Cervical, lumbar and caudal epidurals as well as Transforaminal Nerve Root Blocks"
+    },
+    {
+      "@type": "MedicalProcedure",
+      "name": "Radiofrequency Ablation"
+    },
+    {
+      "@type": "MedicalProcedure",
+      "name": "Epidural Injection"
+    },
+    {
+      "@type": "MedicalProcedure",
+      "name": "Joint Injection"
+    },
+    {
+      "@type": "MedicalProcedure",
+      "name": "Nerve Block"
+    }
+  ],
+  "medicalSpecialty": "",
+  "founder": {
+    "givenName": "Mowafak",
+    "familyName": "Abdelghani",
+    "gender": "Male",
+    "sameAs": [
+      "https://uk.linkedin.com/in/mowafak-abdelghani-1003433b",
+      "https://www.bmihealthcare.co.uk/consultants/mowafak-abdelghani",
+      "https://finder.bupa.co.uk/Consultant/view/238590/dr_mowafak_abdelghani"
+    ],
+    "affiliation": [
+      {
+        "name": "University of Manchester NHS Foundation Trust",
+        "url": "https://mft.nhs.uk/",
+        "sameAs": "https://mft.nhs.uk/"
+      }
+    ],
+    "hasCredential": [
+      {
+        "name": "MBBS"
+      },
+      {
+        "name": "FRCA"
+      }
+    ],
+    "knowsAbout": [
+      {
+        "@type": "MedicalCondition",
+        "name": "Back Pain",
+        "url": "http://dbpedia.org/page/Low_back_pain"
+      },
+      {
+        "@type": "MedicalCondition",
+        "name": "Migraine",
+        "url": "http://dbpedia.org/page/Low_back_pain"
+      },
+      {
+        "@type": "MedicalCondition",
+        "name": "",
+        "url": "http://dbpedia.org/page/Low_back_pain"
+      },
+      {
+        "@type": "MedicalCondition",
+        "name": "Back Pain",
+        "url": "http://dbpedia.org/page/Low_back_pain"
+      }
+    ]
+  },
+  "telephone": "+44-1614476638",
+  "email": "info@picaddillymedical.com",
+  "areaServed": "United Kingdom",
+  "contactPoint": {
+    "contactType": "Customer Service",
+    "availableLanguage": [
+      "English",
+      "Arabic"
+    ],
+    "url": "https://piccadillymedical.com/contact"
+  },
+  "address": {
+    "addressRegion": "England",
+    "addressCountry": "United Kingdom",
+    "addressLocality": "Manchester"
+  }
+}

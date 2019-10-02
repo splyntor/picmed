@@ -1,0 +1,5 @@
+# HTTPS https://piccadillymedical.com/
+
+User-agent: *
+sitemap: https://piccadillymedical.com/sitemap.xml
+Allow: /
