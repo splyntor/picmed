@@ -14,6 +14,12 @@ import TreatmentSection from 'components/PageSections/LandingPage/TreatmentSecti
 import TeamSection from 'components/PageSections/LandingPage/TeamSection'
 import InsurersSection from 'components/PageSections/Partners/Insurers.jsx'
 
+// SEO
+import SEO from 'components/SEO/SEO'
+import StructuredData from '../components/SEO/StructuredData'
+import ldPicMed from '../data/structuredData/picmed'
+import { ldAbdelghani } from '../data/structuredData/people'
+
 export default () => (
   <Layout
     heroImage={heroImage}
@@ -28,6 +34,9 @@ export default () => (
       </>
     }
   >
+    <SEO title="Home" />
+    <StructuredData {...ldPicMed} />
+    <StructuredData {...ldAbdelghani} />
     <IntroSection />
     <TreatmentSection />
     <TeamSection />

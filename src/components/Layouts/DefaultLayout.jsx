@@ -23,8 +23,9 @@ import defaultHeroImage from 'assets/img/bruce-mars-gJtDg6WfMlQ-unsplash-16_9.jp
 
 function DefaultLayout({ ...props }) {
   const { classes, heroImage, heroTitle, heroSubtitle, children } = props
+
   return (
-    <div>
+    <>
       <Header rightLinks={<HeaderLinks />} fixed />
       <Parallax filter image={heroImage}>
         <div className={classes.container}>
@@ -40,7 +41,7 @@ function DefaultLayout({ ...props }) {
         <div className={classes.container}>{children}</div>
       </div>
       <Footer />
-    </div>
+    </>
   )
 }
 

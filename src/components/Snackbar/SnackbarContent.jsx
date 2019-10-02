@@ -33,15 +33,15 @@ class SnackbarContent extends React.Component {
 
     let snackIcon = null
     switch (typeof icon) {
-    case 'function':
-      snackIcon = <props.icon className={classes.icon} />
-      break
-    case 'string':
-      snackIcon = <Icon className={classes.icon}>{props.icon}</Icon>
-      break
-    default:
-      snackIcon = null
-      break
+      case 'function':
+        snackIcon = <props.icon className={classes.icon} />
+        break
+      case 'string':
+        snackIcon = <Icon className={classes.icon}>{props.icon}</Icon>
+        break
+      default:
+        snackIcon = null
+        break
     }
 
     this.state = {
