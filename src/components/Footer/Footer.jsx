@@ -12,7 +12,8 @@ import ListItem from '@material-ui/core/ListItem'
 import IconButton from '@material-ui/core/IconButton'
 
 // credits
-import Credits from '../Credits/Credits'
+// import Credits from '../Credits/Credits'
+
 // icons
 import ContactSupportIcon from '@material-ui/icons/ContactSupport'
 
@@ -94,9 +95,9 @@ function Footer({ ...props }) {
             </a>
           </ListItem>
 
-          <ListItem className={classes.inlineBlock}>
+          {/* <ListItem className={classes.inlineBlock}>
             <Credits />
-          </ListItem>
+          </ListItem> */}
         </List>
         {/* </div> */}
 
