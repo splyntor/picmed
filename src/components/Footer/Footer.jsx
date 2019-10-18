@@ -11,12 +11,9 @@ import List from '@material-ui/core/List'
 import ListItem from '@material-ui/core/ListItem'
 import IconButton from '@material-ui/core/IconButton'
 
-// Components for this page
-import Credits from 'components/Credits/Credits.jsx'
-import Insurers from 'components/PageSections/Partners/Insurers.jsx'
-// @material-ui/icons
-import PhoneIcon from '@material-ui/icons/PhoneInTalk'
-import EmailIcon from '@material-ui/icons/EmailOutlined'
+// credits
+import Credits from '../Credits/Credits'
+// icons
 import ContactSupportIcon from '@material-ui/icons/ContactSupport'
 
 // Style
@@ -43,10 +40,7 @@ function Footer({ ...props }) {
         <List className={classes.list}>
           <ListItem className={classes.inlineBlock}>
             <a href={'tel:' + data.contact.phone.replace(/ /g, '')}>
-              <h3 className={classes.subtitle}>
-                {/* <PhoneIcon fontSize='medium' /> */}
-                {data.contact.phone}
-              </h3>
+              <h3 className={classes.subtitle}>{data.contact.phone}</h3>
             </a>
           </ListItem>
           <ListItem className={classes.inlineBlock}>
@@ -58,10 +52,7 @@ function Footer({ ...props }) {
                 encodeURI(data.contact.emailSubject)
               }
             >
-              <h3 className={classes.subtitle}>
-                {/* <EmailIcon fontSize='medium' /> */}
-                {data.contact.email}
-              </h3>
+              <h3 className={classes.subtitle}>{data.contact.email}</h3>
             </a>
           </ListItem>
 
@@ -76,13 +67,22 @@ function Footer({ ...props }) {
       <div className={classes.container}>
         {/* <div className={classes.left}> */}
         <List className={classes.list}>
+          {/* <ListItem className={classes.inlineBlock}>
+          <Link 
+              to='/'
+              children={data.title}
+              className={classes.block}
+            />
+          </ListItem> */}
           <ListItem className={classes.inlineBlock}>
-            <a href="/" className={classes.block}>
-              {data.title}
-            </a>
+            <p className={classes.block}>&copy; 2019 All rights reserved.</p>
           </ListItem>
           <ListItem className={classes.inlineBlock}>
-            All rights reserved.
+            <Link
+              to="/privacypolicy"
+              children="Privacy Policy"
+              className={classes.block}
+            />
           </ListItem>
           <ListItem className={classes.inlineBlock}>
             <a
@@ -92,6 +92,10 @@ function Footer({ ...props }) {
             >
               Website by Splyntor Labs
             </a>
+          </ListItem>
+
+          <ListItem className={classes.inlineBlock}>
+            <Credits />
           </ListItem>
         </List>
         {/* </div> */}

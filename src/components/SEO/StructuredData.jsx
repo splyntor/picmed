@@ -11,7 +11,6 @@ function withContext(e) {
 }
 
 const StructuredData = props => {
-  console.log(props)
   if (Object.entries(props).length) {
     return (
       <Helmet>

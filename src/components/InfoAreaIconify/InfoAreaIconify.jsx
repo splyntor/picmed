@@ -75,9 +75,9 @@ InfoAreaIconify.defaultProps = {
 
 InfoAreaIconify.propTypes = {
   classes: PropTypes.object.isRequired,
-  icon: PropTypes.func.isRequired,
+  icon: PropTypes.object.isRequired,
   title: PropTypes.string.isRequired,
-  description: PropTypes.string.isRequired,
+  description: PropTypes.any.isRequired,
   iconColor: PropTypes.oneOf([
     'primary',
     'warning',
