@@ -7,27 +7,26 @@ intro:
 
 phone: 0123456789
 email: info@piccadillymedical.com
+clinics:
+  spire:
+    title: Spire Manchester Hospital
+    tabtitle: Spire Manchester
+    street: 170 Barlow Moor Road
+    town: Didsbury
+    county: Manchester
+    postcode: M20 2AF  
+  bmiAlex:
+    title: The Alexandra Hospital
+    tabtitle: Alexandra Hospital
+    street: Mill Lane
+    town: Cheadle
+    county: Cheshire
+    postcode: SK8 2PX
+  bmiHigh: 
+    title: The Highfield Hospital
+    tabtitle: BMI Highfield
+    street: Manchester Road
+    town: Rochdale
+    county: Lancashire
+    postcode: OL11 4LZ
 
-bmiAlex:
-  title: The Alexandra Hospital
-  tabtitle: Alexandra Hospital
-  street: Mill Lane
-  town: Cheadle
-  county: Cheshire
-  postcode: SK8 2PX
-
-bmiHigh: 
-  title: The Highfield Hospital
-  tabtitle: BMI Highfield
-  street: Manchester Road
-  town: Rochdale
-  county: Lancashire
-  postcode: OL11 4LZ
- 
-spire:
-  title: Spire Manchester Hospital
-  tabtitle: Spire Manchester
-  street: 170 Barlow Moor Road
-  town: Didsbury
-  county: Manchester
-  postcode: M20 2AF  

@@ -24,12 +24,21 @@ module.exports = {
         path: './src/data/',
       },
     },
+     {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+         name: 'markdown-pages',
+        path: './src/markdown-pages',
+       
+      },
+    },
     {
       resolve: 'gatsby-source-filesystem',
       options: {
         path: './src/assets/img/',
       },
     },
+    `gatsby-transformer-remark`,
     {
       resolve: 'gatsby-plugin-manifest',
       options: {

@@ -7,8 +7,6 @@ import classNames from 'classnames'
 import Card from 'components/Card/Card.jsx'
 import CardHeader from 'components/Card/CardHeader.jsx'
 import CardBody from 'components/Card/CardBody.jsx'
-// Images
-// import profileImage from 'assets/img/team/emma.jpg'
 
 // Style
 import defaultPageStyle from 'assets/jss/material-kit-react/pages/defaultPageStyle.jsx'
@@ -22,7 +20,6 @@ const ProfileSection = props => {
     classes.imgCardTop
   )
   return (
-    // <>
     <section className={classes.section} id={id}>
       <Card plain>
         <CardHeader>
@@ -36,7 +33,6 @@ const ProfileSection = props => {
         </CardBody>
       </Card>
     </section>
-    // </>
   )
 }
 
