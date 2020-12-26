@@ -76,7 +76,7 @@ function Footer({ ...props }) {
             />
           </ListItem> */}
           <ListItem className={classes.inlineBlock}>
-            <p className={classes.block}>&copy; 2019 All rights reserved.</p>
+            <p className={classes.block}>&copy; 2019-2021 All rights reserved.</p>
           </ListItem>
           <ListItem className={classes.inlineBlock}>
             <Link
